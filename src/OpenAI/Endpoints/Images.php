@@ -10,6 +10,7 @@
 namespace Pngx\OpenAI\Endpoints;
 
 use GuzzleHttp\RequestOptions;
+use Pngx\OpenAI\Endpoints\Abstract_Endpoint;
 use Pngx\OpenAI\Exceptions\Bad_Request;
 
 /**
@@ -90,10 +91,10 @@ class Images extends Abstract_Endpoint {
 	 *
 	 * @param array<string|mixed> $args Arguments for the request.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function create( array $args ) {
 		$endpoint = $this->url->get_endpoint_url( static::$endpoint_path, 'generations' );
@@ -122,10 +123,10 @@ class Images extends Abstract_Endpoint {
 	 *
 	 * @param array<string|mixed> $args Arguments for the request.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function edits( array $args ) {
 		$this->required_args = $this->required_edits_args;
@@ -164,10 +165,10 @@ class Images extends Abstract_Endpoint {
 	 *
 	 * @param array<string|mixed> $args Arguments for the request.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function variations( array $args ) {
 		$this->required_args = $this->required_variations_args;

@@ -10,6 +10,7 @@
 namespace Pngx\OpenAI\Endpoints;
 
 use GuzzleHttp\RequestOptions;
+use Pngx\OpenAI\Endpoints\Abstract_Endpoint;
 use Pngx\OpenAI\Exceptions\Bad_Request;
 
 /**
@@ -63,7 +64,7 @@ class Chat extends Abstract_Endpoint {
 	 *
 	 * @param array<string|mixed> $args Arguments for the request.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 */
 	public function create( array $args ) {
 		$args     = $this->parse_args( $args );
@@ -88,7 +89,7 @@ class Chat extends Abstract_Endpoint {
 	 * @param array<string|mixed> $args   Arguments for the request.
 	 * @param mixed               $stream A stream function for server-sent events.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 */
 	public function create_stream( array $args, $stream = null ) {
 		$args     = $this->parse_args( $args );

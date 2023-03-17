@@ -9,9 +9,13 @@
 
 namespace Pngx\OpenAI\Http;
 
+use Pngx\OpenAI\Http\Api_Response;
 use Pngx\AI\OpenAI\Http\WP_Error;
 use function Pngx\AI\OpenAI\Http\apply_filters;
 use function Pngx\AI\OpenAI\Http\pngx_transient_notice;
+use function Pngx\OpenAI\Http\do_action;
+use function Pngx\OpenAI\Http\wp_remote_request;
+use function Pngx\OpenAI\Http\wp_remote_retrieve_response_code;
 
 /**
  * Abstract Class Request_Api

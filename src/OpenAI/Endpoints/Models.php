@@ -9,6 +9,8 @@
 
 namespace Pngx\OpenAI\Endpoints;
 
+use Pngx\OpenAI\Endpoints\Abstract_Endpoint;
+
 /**
  * Class Models
  *
@@ -33,10 +35,10 @@ class Models extends Abstract_Endpoint {
 	 *
 	 * @since   0.1.0
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function all() {
 		return $this->client->get(
@@ -56,10 +58,10 @@ class Models extends Abstract_Endpoint {
 	 *
 	 * @param string $model The name of the model.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function retrieve( string $model ) {
 		 $endpoint = $this->url->get_endpoint_url( static::$endpoint_path, $model );
@@ -85,10 +87,10 @@ class Models extends Abstract_Endpoint {
 	 *
 	 * @param string $model The name of the model.
 	 *
-	 * @return \Pngx\OpenAI\Http\Api_Response
+	 * @return \OpenAI\Http\Api_Response
 	 *
 	 * @throws \GuzzleHttp\Exception\GuzzleException
-	 * @throws \Pngx\OpenAI\Exceptions\Bad_Request
+	 * @throws \OpenAI\Exceptions\Bad_Request
 	 */
 	public function delete( string $model ) {
 		 $endpoint = $this->url->get_endpoint_url( static::$endpoint_path, $model );

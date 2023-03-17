@@ -9,6 +9,8 @@
 
 namespace Pngx\OpenAI\Exceptions;
 
+use Pngx\OpenAI\Exceptions\Api_Exception;
+
 /**
  * Class Bad_Request
  *

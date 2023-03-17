@@ -17,6 +17,7 @@ use GuzzleHttp\Exception\ServerException;
 use InvalidArgumentException;
 use Pngx\OpenAI\Exceptions\Api_Exception;
 use Pngx\OpenAI\Exceptions\Bad_Request;
+use Pngx\OpenAI\Http\Api_Response;
 use Psr\Http\Message\ResponseInterface;
 
 /**
